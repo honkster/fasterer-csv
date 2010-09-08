@@ -128,7 +128,7 @@ module FastererCSV
     end
 
     def headers
-      @table.headers
+      @headers ||= @table.headers.dup
     end
 
     attr_reader :line

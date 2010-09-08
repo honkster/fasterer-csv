@@ -117,6 +117,17 @@ a,b,c,d,e,f,g,h,i,j,k,l,m,
         row["b"].should == "1"
 
       end
+
+      it "allows mutation of rows" do
+        each_called = false
+        table = FastererCSV.parse(@data).each do |row|
+          each_called = true
+          row[:foo] = "bar"
+          row.headers.should == [:a, :b, :c,:d,:e,:f,:g,:h,:i,:j,:k,:l,:m,:_, :foo]
+        end
+        each_called.should be_true
+        table.headers.should == [:a, :b, :c,:d,:e,:f,:g,:h,:i,:j,:k,:l,:m,:_]
+      end
     end
 
     describe "read" do
