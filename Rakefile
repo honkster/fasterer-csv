@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
 
-    gem.name                      = %q{fasterer-csv}
+    gem.name                      = %Q{#{ENV["GEM_PREFIX"] && "#{ENV["GEM_PREFIX"]}-"}fasterer-csv}
     gem.authors                   = ["Mason"]
     gem.email                     = %q{mason@chipped.net}
     gem.date                      = Time.now.strftime("%Y-%m-%d")
