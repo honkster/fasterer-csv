@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{fasterer-csv}
+  s.name = %Q{#{ENV["GEM_PREFIX"] && "#{ENV["GEM_PREFIX"]}-"}fasterer-csv}
   s.version = "1.7.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
