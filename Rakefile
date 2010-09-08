@@ -16,6 +16,7 @@ begin
 Kernel Panic!  System32 deleted!  Klaxons klaxoning!  Dogs and Cats living together!!!!  We're doooomed!  Everything is...
 oh, no wait, it installed fine.  My bad.
 POST
+    gem.files = Dir["lib/**/*.rb", "LICENSE", "Rakefile", "VERSION", "**/*.rdoc", "spec/**/*.rb"]
 
   end
   Jeweler::GemcutterTasks.new

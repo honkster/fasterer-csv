@@ -4,12 +4,12 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %Q{#{ENV["GEM_PREFIX"] && "#{ENV["GEM_PREFIX"]}-"}fasterer-csv}
+  s.name = %q{fasterer-csv}
   s.version = "1.7.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mason"]
-  s.date = %q{2010-07-02}
+  s.date = %q{2010-09-07}
   s.description = %q{CSV parsing awesomeness}
   s.email = %q{mason@chipped.net}
   s.extra_rdoc_files = [
@@ -17,35 +17,12 @@ Gem::Specification.new do |s|
      "README.rdoc"
   ]
   s.files = [
-    ".document",
-     ".gitignore",
-     "LICENSE",
+    "LICENSE",
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "fasterer-csv.gemspec",
      "lib/fasterer_csv.rb",
-     "pkg/fasterer-csv-0.0.1.gem",
-     "pkg/fasterer-csv-0.0.10.gem",
-     "pkg/fasterer-csv-0.0.11.gem",
-     "pkg/fasterer-csv-0.0.12.gem",
-     "pkg/fasterer-csv-0.0.14.gem",
-     "pkg/fasterer-csv-0.0.2.gem",
-     "pkg/fasterer-csv-0.0.3.gem",
-     "pkg/fasterer-csv-0.0.4.gem",
-     "pkg/fasterer-csv-0.0.5.gem",
-     "pkg/fasterer-csv-0.0.6.gem",
-     "pkg/fasterer-csv-0.0.7.gem",
-     "pkg/fasterer-csv-0.0.8.gem",
-     "pkg/fasterer-csv-0.0.9.gem",
-     "pkg/fasterer-csv-1.0.0.gem",
-     "pkg/fasterer-csv-1.1.0.gem",
-     "pkg/fasterer-csv-1.2.0.gem",
-     "pkg/fasterer-csv-1.4.0.gem",
-     "pkg/fasterer-csv-1.4.1.gem",
-     "pkg/fasterer-csv-1.5.3.gem",
      "spec/fasterer_csv_spec.rb",
-     "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/gnovos/fasterer-csv}
@@ -57,8 +34,8 @@ oh, no wait, it installed fine.  My bad.
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Even fasterer than FasterCSV!}
   s.test_files = [
-    "spec/fasterer_csv_spec.rb",
-     "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+     "spec/fasterer_csv_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
