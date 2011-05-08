@@ -21,7 +21,7 @@ describe "FastererCSV" do
       it "works" do
 
         conv = FastererCSV::NumericConversion.new
-        conv << ?1
+        conv << ?1.ord
         conv.convert(true).class.should == String
         conv.convert(true).should == "1"
 
@@ -29,37 +29,37 @@ describe "FastererCSV" do
         conv.convert(false).should == 1
 
         conv.clear
-        conv << ?-
-        conv << ?1
+        conv << ?-.ord
+        conv << ?1.ord
         conv.convert(false).class.should == Fixnum
         conv.convert(false).should == -1
 
         conv.clear
-        conv << ?1
-        conv << ?.
-        conv << ?1
+        conv << ?1.ord
+        conv << ?..ord
+        conv << ?1.ord
         conv.convert(false).class.should == Float
         conv.convert(false).should == 1.1
 
         conv.clear
-        conv << ?-
-        conv << ?1
-        conv << ?.
-        conv << ?1
+        conv << ?-.ord
+        conv << ?1.ord
+        conv << ?..ord
+        conv << ?1.ord
         conv.convert(false).class.should == Float
         conv.convert(false).should == -1.1
 
         conv.clear
-        conv << ?1
-        conv << ?.
-        conv << ?1
-        conv << ?.
-        conv << ?1
+        conv << ?1.ord
+        conv << ?..ord
+        conv << ?1.ord
+        conv << ?..ord
+        conv << ?1.ord
         conv.convert(false).class.should == String
         conv.convert(false).should == "1.1.1"
 
         conv.clear
-        conv << ?a
+        conv << ?a.ord
         conv.convert(false).class.should == String
         conv.convert(false).should == "a"
 
@@ -74,7 +74,7 @@ describe "FastererCSV" do
       it "works" do
 
         conv = FastererCSV::NoConversion.new
-        conv << ?1
+        conv << ?1.ord
         conv.convert(true).class.should == String
         conv.convert(false).class.should == String
 
